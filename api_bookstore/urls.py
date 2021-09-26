@@ -19,4 +19,20 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapi.urls')),
+
+    path('', include('rest_auth.urls')),
+    path('registration/', include('rest_auth.registration.urls')),
+
+    path('login/', include('rest_auth.registration.urls')),
+    path('logout/', include('rest_auth.registration.urls')),
+    path('user/', include('rest_auth.registration.urls')),
+    path('password/chance/', include('rest_auth.registration.urls')),
+    path('password/reset/', include('rest_auth.registration.urls')),
+    path('password/resetconfirm/', include('rest_auth.registration.urls')),
+
+
+
+
 ]
+
+
